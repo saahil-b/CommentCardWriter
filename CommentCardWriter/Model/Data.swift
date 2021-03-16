@@ -10,8 +10,8 @@ import Foundation
 class Data: ObservableObject {
     @Published var terms: [Term]
     
-    init(terms: [Term] = [] ) {
-        self.terms = terms
+    init() {
+        terms = Term.examples
     }
     
     func addTerm(term: Term) {
@@ -21,9 +21,7 @@ class Data: ObservableObject {
     #if DEBUG
     
     //examples
-    
-    static let example = Data(terms: Term.examples)
-    
+        
     #endif
     
 }
