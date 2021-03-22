@@ -12,7 +12,7 @@ struct CommentCardWriterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(Data())
+                .environmentObject(StateController())
         }
     }
 }

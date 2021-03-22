@@ -9,15 +9,19 @@ import SwiftUI
 
 struct CommentView: View {
     
-    
+    var subject: Subject
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(subject.name)
+            
+            Text(subject.comment)
+        }
     }
 }
 
 struct CommentView_Previews: PreviewProvider {
     static var previews: some View {
-        CommentView()
+        CommentView(subject: Subject.examples[0])
     }
 }

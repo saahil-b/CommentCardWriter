@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct SubjectView: View {
+    var term: Term
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+            Text(term.name)
+                .bold()
+            
+            List(term.subjects, id: \.self.name) { subject in
+                NavigationLink(
+                    destination: CommentView(subject: subject),
+                    label: {
+                        Text(subject.name)
+                    })
+            }
+        }
     }
 }
 
 struct SubjectView_Previews: PreviewProvider {
     static var previews: some View {
-        SubjectView()
+        SubjectView(term: Term.examples[0])
+
     }
 }

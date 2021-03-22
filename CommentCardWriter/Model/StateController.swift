@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Data: ObservableObject {
+class StateController: ObservableObject {
     @Published var terms: [Term]
     
     init() {

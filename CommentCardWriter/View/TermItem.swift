@@ -15,11 +15,7 @@ struct TermItem: View {
         
         HStack {
             Text(term.name)
-            
-            Spacer()
-            
-            Image("chart.pie")
-            
+
         }
     }
 }

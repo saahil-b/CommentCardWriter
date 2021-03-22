@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		07B0729A2600D55300436E56 /* TermItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B072992600D55300436E56 /* TermItem.swift */; };
+		AB1D21E92608F1D4005066DF /* TakeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1D21E82608F1D4005066DF /* TakeInputView.swift */; };
 		AB2D13F925FFB0B5008F3D56 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D13F825FFB0B5008F3D56 /* CommentView.swift */; };
 		AB2D141125FFB11D008F3D56 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D141025FFB11D008F3D56 /* Term.swift */; };
 		AB2D141625FFB184008F3D56 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D141525FFB184008F3D56 /* Subject.swift */; };
-		AB2D141B25FFB21C008F3D56 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D141A25FFB21C008F3D56 /* Data.swift */; };
+		AB2D141B25FFB21C008F3D56 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D141A25FFB21C008F3D56 /* StateController.swift */; };
 		AB2D142325FFB736008F3D56 /* SubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D142225FFB736008F3D56 /* SubjectView.swift */; };
 		AB8EDF2825FB94FA002CF00F /* CommentCardWriterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EDF2725FB94FA002CF00F /* CommentCardWriterApp.swift */; };
 		AB8EDF2A25FB94FA002CF00F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8EDF2925FB94FA002CF00F /* ContentView.swift */; };
@@ -41,10 +42,11 @@
 
 /* Begin PBXFileReference section */
 		07B072992600D55300436E56 /* TermItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermItem.swift; sourceTree = "<group>"; };
+		AB1D21E82608F1D4005066DF /* TakeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeInputView.swift; sourceTree = "<group>"; };
 		AB2D13F825FFB0B5008F3D56 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		AB2D141025FFB11D008F3D56 /* Term.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
 		AB2D141525FFB184008F3D56 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
-		AB2D141A25FFB21C008F3D56 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		AB2D141A25FFB21C008F3D56 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		AB2D142225FFB736008F3D56 /* SubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectView.swift; sourceTree = "<group>"; };
 		AB8EDF2425FB94FA002CF00F /* CommentCardWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentCardWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8EDF2725FB94FA002CF00F /* CommentCardWriterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterApp.swift; sourceTree = "<group>"; };
@@ -149,7 +151,7 @@
 			children = (
 				AB8EDF2725FB94FA002CF00F /* CommentCardWriterApp.swift */,
 				AB8EDF5725FB9555002CF00F /* CommentGenerator.swift */,
-				AB2D141A25FFB21C008F3D56 /* Data.swift */,
+				AB2D141A25FFB21C008F3D56 /* StateController.swift */,
 				AB2D141025FFB11D008F3D56 /* Term.swift */,
 				AB2D141525FFB184008F3D56 /* Subject.swift */,
 			);
@@ -163,6 +165,7 @@
 				AB2D142225FFB736008F3D56 /* SubjectView.swift */,
 				AB2D13F825FFB0B5008F3D56 /* CommentView.swift */,
 				07B072992600D55300436E56 /* TermItem.swift */,
+				AB1D21E82608F1D4005066DF /* TakeInputView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,7 +300,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B0729A2600D55300436E56 /* TermItem.swift in Sources */,
-				AB2D141B25FFB21C008F3D56 /* Data.swift in Sources */,
+				AB2D141B25FFB21C008F3D56 /* StateController.swift in Sources */,
+				AB1D21E92608F1D4005066DF /* TakeInputView.swift in Sources */,
 				AB8EDF5825FB9555002CF00F /* CommentGenerator.swift in Sources */,
 				AB8EDF2A25FB94FA002CF00F /* ContentView.swift in Sources */,
 				AB2D141125FFB11D008F3D56 /* Term.swift in Sources */,
