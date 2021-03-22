@@ -13,9 +13,55 @@ struct CommentView: View {
     
     var body: some View {
         VStack {
-            Text(subject.name)
             
+            Spacer()
+            
+            //top line
+            HStack (alignment: .center, spacing: 20){
+                
+                NavigationLink(
+                    destination: Text("back"),
+                    label: {
+                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                            Image(systemName: "chevron.left.circle")
+                        })
+                    })
+                
+                Text(subject.name)
+                    .font(.largeTitle)
+                
+            }
+            
+            //comment
             Text(subject.comment)
+                .font(.body)
+            
+            Spacer()
+            
+            //buttons
+            HStack {
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    VStack {
+                        Image(systemName: "folder.circle")
+                            
+                        Button("save", action: { }).font(.title2)
+                        
+                    }.frame(width: 100, height: 100, alignment: .center)
+                })
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    VStack {
+                        
+                        Image(systemName: "pencil.circle")
+                        
+                        Text("edit").font(.title2)
+                        
+                    }.frame(width: 100, height: 100, alignment: .center)
+                })
+                
+            }
+                
         }
     }
 }

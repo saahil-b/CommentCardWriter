@@ -17,13 +17,21 @@ struct ContentView: View {
             
             Spacer()
             
+            //main title
             Text("Comment Card Writer")
                 .bold()
-                .font(.system(size: 35))
+                .font(.largeTitle)
             
+            Spacer()
+            
+            //subtitle
             Text("by Mango Fruit Co.")
-                .font(.system(size: 20))
+                .font(.title2)
+            
+            Spacer()
+            Spacer()
                     
+            //data list
             List(data.terms, id: \.self.name) { term in
                 NavigationLink(
                     destination: SubjectView(term: term),
@@ -34,27 +42,32 @@ struct ContentView: View {
            
             Spacer()
             
+            //buttons
             HStack {
                 
-                VStack {
-                    Image(systemName: "plus.circle")
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    VStack {
+                        Image(systemName: "plus.circle")
+                            
+                        Button("add", action: {
+                            data.addTerm(term: Term(name: "New Term"))
+                        }).font(.title2)
                         
-                    Button("add", action: {
-                        data.addTerm(term: Term(name: "New Term"))
-                    }).font(.system(size: 22))
-                    
-                }.frame(width: 125, height: 125, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    }.frame(width: 100, height: 100, alignment: .center)
+                })
                 
-
-                VStack {
-                    Image(systemName: "minus.circle")
-                    
-                    Button("remove", action: {
-                        //
-                    } )
-                        .font(.system(size: 22))
-                    
-                }.frame(width: 125, height: 125, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    VStack {
+                        
+                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                            Image(systemName: "minus.circle")
+                        })
+                        
+                        Text("remove")
+                            .font(.title2)
+                        
+                    }.frame(width: 100, height: 100, alignment: .center)
+                })
                 
             }
 
