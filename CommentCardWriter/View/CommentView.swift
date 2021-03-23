@@ -38,6 +38,17 @@ struct CommentView: View {
             
             Spacer()
             
+            //edit button
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                VStack {
+                    
+                    Image(systemName: "pencil.circle")
+                    
+                    Text("edit").font(.title2)
+                    
+                }.frame(width: 100, height: 100, alignment: .center)
+            })
+            
             //buttons
             HStack {
                 
@@ -53,9 +64,9 @@ struct CommentView: View {
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     VStack {
                         
-                        Image(systemName: "pencil.circle")
+                        Image(systemName: "arrow.counterclockwise.circle")
                         
-                        Text("edit").font(.title2)
+                        Text("redo").font(.title2)
                         
                     }.frame(width: 100, height: 100, alignment: .center)
                 })

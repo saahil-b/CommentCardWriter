@@ -21,10 +21,10 @@ class Subject {
     
     //examples
     
-    static let examples = [Subject(name: "Physics", comment: "Very fun"),
-                    Subject(name: "Maths", comment: "fun"),
-                    Subject(name: "Chemistry", comment: "not fun"),
-                    Subject(name: "Compsci", comment: "unbearably fun")]
+    static let examples = [Subject(name: "Physics", comment: CommentGenerator.example),
+                    Subject(name: "Maths", comment: CommentGenerator.example),
+                    Subject(name: "Chemistry", comment: CommentGenerator.example),
+                    Subject(name: "Compsci", comment: CommentGenerator.example)]
     
     #endif
 }

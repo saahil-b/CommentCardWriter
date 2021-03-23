@@ -45,13 +45,14 @@ struct ContentView: View {
             //buttons
             HStack {
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                        data.addTerm(term: Term(name: "New Term"))
+                    
+                }, label: {
                     VStack {
                         Image(systemName: "plus.circle")
                             
-                        Button("add", action: {
-                            data.addTerm(term: Term(name: "New Term"))
-                        }).font(.title2)
+                        Text("add").font(.title2)
                         
                     }.frame(width: 100, height: 100, alignment: .center)
                 })
