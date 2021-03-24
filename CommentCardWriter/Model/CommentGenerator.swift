@@ -49,8 +49,8 @@ class CommentGenerator {
                 
         var final = ""
         
-        final += "I am \(getHappyWords())happy with my progress"
-        final += "I really enjoyed studying \(enjoyed)."
+        final += "I am \(getHappyWords())happy with my progress. "
+        final += "I really enjoyed studying \(enjoyed) "
         final += "but I think I need to work on \(workOn)."
         
         return final

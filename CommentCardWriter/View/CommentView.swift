@@ -22,32 +22,45 @@ struct CommentView: View {
                 NavigationLink(
                     destination: Text("back"),
                     label: {
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Image(systemName: "chevron.left.circle")
-                        })
+                        Image(systemName: "chevron.left.circle")
                     })
                 
                 Text(subject.name)
+                    .bold()
                     .font(.largeTitle)
                 
             }
             
-            //comment
-            Text(subject.comment)
-                .font(.body)
-            
+            Divider()
             Spacer()
             
-            //edit button
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                VStack {
-                    
-                    Image(systemName: "pencil.circle")
-                    
-                    Text("edit").font(.title2)
-                    
-                }.frame(width: 100, height: 100, alignment: .center)
-            })
+            VStack {
+                
+                Spacer()
+                
+                //comment
+                Text(subject.comment)
+                    .font(.body)
+                
+                Spacer()
+                
+                //edit button
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    VStack {
+                        
+                        Image(systemName: "pencil.circle")
+                        
+                        Text("edit").font(.title2)
+                        
+                    }.frame(width: 100, height: 100, alignment: .center)
+                })
+                
+                Spacer()
+                
+            }
+            
+            Spacer()
+            Divider()
             
             //buttons
             HStack {
@@ -55,8 +68,10 @@ struct CommentView: View {
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     VStack {
                         Image(systemName: "folder.circle")
+                            .imageScale(.large)
                             
-                        Button("save", action: { }).font(.title2)
+                        
+                        Text("save").font(.title2)
                         
                     }.frame(width: 100, height: 100, alignment: .center)
                 })
@@ -65,6 +80,7 @@ struct CommentView: View {
                     VStack {
                         
                         Image(systemName: "arrow.counterclockwise.circle")
+                            .imageScale(.large)
                         
                         Text("redo").font(.title2)
                         

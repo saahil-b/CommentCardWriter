@@ -35,6 +35,7 @@ struct SubjectView: View {
             
             Spacer()
             Spacer()
+            Divider()
             
             //data list
             List(term.subjects, id: \.self.name) { subject in
@@ -45,7 +46,7 @@ struct SubjectView: View {
                     })
             }
             
-            Spacer()
+            Divider()
             
             //buttons
             HStack {
@@ -55,7 +56,7 @@ struct SubjectView: View {
                     VStack {
                         Image(systemName: "plus.circle")
                             
-                        Button("add", action: {}).font(.title2)
+                        Text("add").font(.title2)
                         
                     }.frame(width: 100, height: 100, alignment: .center)
                 }

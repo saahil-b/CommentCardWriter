@@ -20,7 +20,9 @@ struct TakeInputView: View {
         VStack {
             Spacer()
             
-            Text("Comment Generator").font(.largeTitle)
+            Text("Comment Generator")
+                .bold()
+                .font(.largeTitle)
             
             VStack(alignment: .leading, spacing: 20) {
                 

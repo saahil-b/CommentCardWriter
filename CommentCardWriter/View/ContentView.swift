@@ -30,7 +30,8 @@ struct ContentView: View {
             
             Spacer()
             Spacer()
-                    
+            Divider()
+
             //data list
             List(data.terms, id: \.self.name) { term in
                 NavigationLink(
@@ -40,7 +41,7 @@ struct ContentView: View {
                     })
             }
            
-            Spacer()
+            Divider()
             
             //buttons
             HStack {
@@ -50,19 +51,20 @@ struct ContentView: View {
                     
                 }, label: {
                     VStack {
-                        Image(systemName: "plus.circle")
+                        Image(systemName: "plus.circle").imageScale(.large)
                             
                         Text("add").font(.title2)
                         
                     }.frame(width: 100, height: 100, alignment: .center)
                 })
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    // remove func
+                }, label: {
                     VStack {
                         
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Image(systemName: "minus.circle")
-                        })
+                        
+                        Image(systemName: "minus.circle").imageScale(.large)
                         
                         Text("remove")
                             .font(.title2)
