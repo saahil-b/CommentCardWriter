@@ -28,7 +28,15 @@ class Term {
     static let examples = [Term(name: "Mich 2018", subjects: Subject.examples),
                     Term(name: "Lent 2019", subjects: Subject.examples),
                     Term(name: "Summer 2019", subjects: Subject.examples),
-                    Term(name: "Mich 2020", subjects: Subject.examples)]
+                    Term(name: "Mich 2020", subjects: Subject.examples),
+                    Term(name: "Lent 2021", subjects: Subject.examples),
+                    Term(name: "Summer 2021", subjects: Subject.examples),
+                    Term(name: "Mich 2021", subjects: Subject.examples),
+                    Term(name: "Lent 2022", subjects: Subject.examples),
+                    Term(name: "Summer 2022", subjects: Subject.examples),
+                    Term(name: "Mich 2022", subjects: Subject.examples),
+                    Term(name: "Lent 2023", subjects: Subject.examples),
+                    Term(name: "Summer 2023", subjects: Subject.examples)]
     
     #endif
 }

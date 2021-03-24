@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TakeInputView: View {
     
-    var subject: Subject
+    @State var subject: Subject
     
     @State private var enjoyed: String = ""
     @State private var workOn: String = ""
@@ -30,14 +30,18 @@ struct TakeInputView: View {
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text("What topic did you enjoy?")
+                    
                     TextField("Enter here...", text: $enjoyed)
+                        .autocapitalization(.none)
                 }
                 
                 Divider()
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text("What topic do you need to work on?")
+                    
                     TextField("Enter here...", text: $workOn)
+                        .autocapitalization(.none)
                 
                 }
                 
@@ -51,17 +55,25 @@ struct TakeInputView: View {
                 Spacer()
             
             }
-                        
-            Button(action: {
-                //save func
-            }, label: {
-                
-                VStack {
-                    Image(systemName: "folder.circle").imageScale(.large)
-                    Text("save").font(.title2)
+            
+            NavigationLink(
+                destination: CommentView(subject: subject)
+            ) {
+                Button(action: {
+                    subject.comment = CommentGenerator(enjoyed: enjoyed, workOn: workOn, happiness: happiness).comment
+                    //save func
+                }, label: {
                     
-                }.frame(width: 100, height: 100, alignment: .center)
-            })
+                    VStack {
+                        Image(systemName: "folder.circle")
+                            .imageScale(.large)
+                        
+                        Text("save").font(.title2)
+                        
+                    }.frame(width: 100, height: 100, alignment: .center)
+                })
+            
+            }
             
             Spacer()
         }

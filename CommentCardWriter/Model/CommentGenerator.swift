@@ -8,17 +8,16 @@
 import Foundation
 
 class CommentGenerator {
-    let enjoyed: String
-    let workOn: String
-    let happiness: Double
+    
+    var comment: String
     
     init(enjoyed: String, workOn: String, happiness: Double) {
-        self.enjoyed = enjoyed
-        self.workOn = workOn
-        self.happiness = happiness
+        
+        self.comment = ""
+        self.comment = firstGenerateComment(enjoyed: enjoyed, workOn: workOn, happiness: happiness)
     }
     
-    func getHappyWords() -> String {
+    func getHappyWords(happiness: Double) -> String {
         
         var happyWords = ""
         
@@ -45,13 +44,13 @@ class CommentGenerator {
         
     }
     
-    func generateComment() -> String {
+    func firstGenerateComment(enjoyed: String, workOn: String, happiness: Double) -> String {
                 
         var final = ""
         
-        final += "I am \(getHappyWords())happy with my progress. "
-        final += "I really enjoyed studying \(enjoyed) "
-        final += "but I think I need to work on \(workOn)."
+        final += "I am \(getHappyWords(happiness: happiness))happy with my progress. "
+        final += "I really enjoyed studying \(enjoyed.trimmingCharacters(in: .whitespacesAndNewlines)) "
+        final += "but I think I need to work on \(workOn.trimmingCharacters(in: .whitespacesAndNewlines))."
         
         return final
 
@@ -61,7 +60,7 @@ class CommentGenerator {
     
     //examples
     
-    static let example = CommentGenerator(enjoyed: "mechanics", workOn: "hypothesis testing", happiness: 3.0).generateComment()
+    static let example = CommentGenerator(enjoyed: "mechanics", workOn: "hypothesis testing", happiness: 3.0).comment
     
     #endif
 }

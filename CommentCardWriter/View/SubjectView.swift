@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SubjectView: View {
-    var term: Term
+    
+    @State var term: Term
     
     var body: some View {
         
@@ -54,7 +55,7 @@ struct SubjectView: View {
                 Button(action: {
                     term.addSubject(subject: Subject(name: "New Subject", comment: "OK"))}) {
                     VStack {
-                        Image(systemName: "plus.circle")
+                        Image(systemName: "plus.circle").imageScale(.large)
                             
                         Text("add").font(.title2)
                         
@@ -64,7 +65,7 @@ struct SubjectView: View {
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     VStack {
                         
-                        Image(systemName: "minus.circle")
+                        Image(systemName: "minus.circle").imageScale(.large)
                         
                         Text("remove")
                             .font(.title2)

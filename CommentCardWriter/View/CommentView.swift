@@ -9,9 +9,10 @@ import SwiftUI
 
 struct CommentView: View {
     
-    var subject: Subject
+    @State var subject: Subject
     
     var body: some View {
+        
         VStack {
             
             Spacer()
@@ -33,31 +34,12 @@ struct CommentView: View {
             
             Divider()
             Spacer()
+                
+            //comment
+            TextEditor(text: $subject.comment)
+                .font(.body)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
             
-            VStack {
-                
-                Spacer()
-                
-                //comment
-                Text(subject.comment)
-                    .font(.body)
-                
-                Spacer()
-                
-                //edit button
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    VStack {
-                        
-                        Image(systemName: "pencil.circle")
-                        
-                        Text("edit").font(.title2)
-                        
-                    }.frame(width: 100, height: 100, alignment: .center)
-                })
-                
-                Spacer()
-                
-            }
             
             Spacer()
             Divider()
@@ -65,7 +47,10 @@ struct CommentView: View {
             //buttons
             HStack {
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    // save func
+                    
+                }, label: {
                     VStack {
                         Image(systemName: "folder.circle")
                             .imageScale(.large)
@@ -76,7 +61,8 @@ struct CommentView: View {
                     }.frame(width: 100, height: 100, alignment: .center)
                 })
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                NavigationLink(
+                    destination: TakeInputView(subject: subject),label: {
                     VStack {
                         
                         Image(systemName: "arrow.counterclockwise.circle")
